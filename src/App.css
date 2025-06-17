@@ -1,0 +1,138 @@
+/* Base layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-box input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.search-box button {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+/* Weather card */
+.weather-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.weather-box h2 {
+  margin: 0;
+}
+
+.weather-box img {
+  width: 64px;
+  height: 64px;
+}
+
+.weather-box p {
+  margin: 8px 0;
+  text-transform: capitalize;
+}
+
+/* Responsive tweaks */
+@media (min-width: 500px) {
+  .search-box {
+    flex-direction: row;
+  }
+
+  .search-box input {
+    flex: 1;
+  }
+
+  .search-box button {
+    width: auto;
+  }
+}
+
+
+/* Clear any previous styles */
+body {
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s ease;
+  font-family: Arial, sans-serif;
+}
+
+/* Weather background themes for body */
+.body-default {
+  background: linear-gradient(to right, #74ebd5, #9face6);
+}
+
+.body-sunny {
+  background: linear-gradient(to top right, #fbc2eb, #a6c1ee);
+}
+
+.body-cloudy {
+  background: linear-gradient(to top right, #bdc3c7, #2c3e50);
+}
+
+.body-rainy {
+  background: linear-gradient(to top right, #4b79a1, #283e51);
+}
+
+.body-snowy {
+  background: linear-gradient(to top right, #e6dada, #274046);
+}
+
+.body-foggy {
+  background: linear-gradient(to top right, #757f9a, #d7dde8);
+}
+
+
+.loader {
+  margin: 20px auto;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
