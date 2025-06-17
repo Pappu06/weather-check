@@ -30,7 +30,7 @@ export default function WeatherCard() {
     console.error(error);
     setWeatherData(null);
   } finally {
-    setIsLoading(false); // ✅ Always hide spinner
+    setIsLoading(false); 
   }
 };
 
