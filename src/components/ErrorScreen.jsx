@@ -1,5 +1,5 @@
 export default function ErrorScreen({ searchTerm, onRetry, onCityClick }) {
-  const suggestions = ["London", "Tokyo", "New York", "Paris"];
+  const suggestions = ["Delhi", "Mumbai", "Kolkata", "Chennai", "Bangalore", "Hyderabad"];
 
   return (
     <div className="app-container">
