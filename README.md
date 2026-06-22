@@ -1,12 +1,54 @@
-# React + Vite
+# Weather Check — Atmospheric Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, interactive weather dashboard designed with an **Atmospheric Glassmorphism** design system. Powered by Vite, React, WebGL (via Three.js/custom shader), and the WeatherAPI.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Atmospheric Background**: A custom WebGL shader background animating custom color orbs that create a premium glassmorphic atmosphere.
+- **Instant Search**: Check the weather conditions and full forecasts for any city in the world.
+- **Popular Indian Cities Quick-Access**: Instant shortcuts on the landing screen for Delhi, Mumbai, Kolkata, Chennai, Bangalore, and Hyderabad.
+- **Detailed Real-Time Dashboard**:
+  - Main hero card with current temperature, condition text, high/low, feels-like, wind speed, humidity, and UV index.
+  - Air Quality Index (AQI) metric progress display.
+  - Interactive Sun/Moon twilight arch tracker.
+  - Barometric pressure and visibility displays.
+- **Hourly Forecast**: Responsive, swipeable list showing temperature trends over the next 7 hours.
+- **5-Day Weather Forecast**: Temperature range visualizer bars and daily condition summaries.
+- **Responsive Layout**: Designed from the ground up to look gorgeous on viewports from desktop down to 320px mobile screens.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework**: React 18 & Vite (Fast HMR)
+- **Styling**: Vanilla CSS (Atmospheric Glass Design Tokens)
+- **Background**: Custom WebGL Canvas (GLSL Fragment Shaders)
+- **Weather Service**: WeatherAPI (Current + AQI + Forecast endpoints)
+
+## 🚀 Setup & Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Pappu06/weather-check.git
+   cd weather-check
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:5174/` (or the terminal-provided port) in your web browser.
+
+4. **Production Build**:
+   ```bash
+   npm run build
+   ```
+
+## 📱 Responsiveness Design Details
+
+- **Header Auto-Stacking**: Under 768px, the dashboard header wraps, layout-ordering the search bar on its own line for ideal mobile keyboard entry.
+- **Mobile Forecast Conserving**: For screens under 480px, condition text inside the 5-day forecast hides, showing only the condition weather icons to conserve horizontal space.
+- **Fluid Layouts**: Grids automatically adjust from 4 columns to 2 columns on tablets, and 1 column on phones.
